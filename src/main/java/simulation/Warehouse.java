@@ -1,4 +1,4 @@
-package src.main.java;
+package simulation;
 
 public class Warehouse {
     private final int capacity;

@@ -1,4 +1,4 @@
-package src.main.java;
+package simulation;
 
 public class Truck {
     private final String truckId;
