@@ -1,4 +1,4 @@
-package src.main.java;
+package simulation;
 
 import java.util.Random;
 
@@ -24,7 +24,7 @@ public class Producer {
     /**
      * Called once per day in the simulation to decide whether a producer delivers goods.
      */
-    public int getDeliveryForToday(int currentDay, int totalDays) {
+    public int getDeliveryForToday() {
         int daysPerWeek = 7;
         double deliveriesPerDay = (double) deliveriesPerWeek / daysPerWeek;
         
