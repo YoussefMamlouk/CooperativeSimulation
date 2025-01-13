@@ -1,4 +1,4 @@
-package src.main.java;
+package simulation;
 
 import java.util.List;
 import java.util.Random;
@@ -41,7 +41,7 @@ public class Simulation {
                 System.out.println("\n--- Day " + day + " ---");
                 
                 // Producers deliver to warehouse
-                producerDeliveries((month - 1) * 30 + day - 1);
+                producerDeliveries();
                 
                 // Load and dispatch trucks if possible
                 loadAndDispatchTrucks();
@@ -58,9 +58,9 @@ public class Simulation {
      * Each producer may deliver goods today.
      * We store what we can in the warehouse (limited by capacity).
      */
-    private void producerDeliveries(int currentDay) {
+    private void producerDeliveries() {
         for (Producer p : producers) {
-            int deliveryAmount = p.getDeliveryForToday(currentDay, totalMonths);
+            int deliveryAmount = p.getDeliveryForToday();
             if (deliveryAmount > 0) {
                 int stored = warehouse.store(deliveryAmount);
                 
